@@ -11,7 +11,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderTitle = styled.header`
-  font-size: 24px;
+  font-size: 20px;
   align-self: center;
   color: ${(props) => props.theme.sectionHeaderText};
 `;

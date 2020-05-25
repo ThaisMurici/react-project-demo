@@ -5,6 +5,7 @@ import { lightTheme } from "../../global/theme";
 import { GlobalStyle } from "../../global/styles";
 
 import MainHeader from "../MainHeader";
+import Posts from "../../screens/Posts";
 
 import { ApplicationContainer } from "./styles";
 
@@ -14,6 +15,7 @@ function App() {
       <ApplicationContainer>
         <GlobalStyle />
         <MainHeader />
+        <Posts />
       </ApplicationContainer>
     </ThemeProvider>
   );
