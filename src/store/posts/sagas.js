@@ -14,7 +14,7 @@ export function* fetchPosts() {
   try {
     const { data } = yield call(apiService.get, "/posts");
 
-    yield put(fetchPostsSuccess({ posts: data }));
+    yield put(fetchPostsSuccess({ posts: data.slice(0, 5) }));
   } catch (error) {
     yield put(fetchPostsFailure());
   }

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import PostsTable from "./components/PostsTable";
+
 import {
   ScreenContainer,
   ContentContainer,
@@ -18,6 +20,7 @@ function Posts({ posts, handleFetchPosts }) {
         <ContentHeaderContainer>
           <ContentHeaderTitle>Posts</ContentHeaderTitle>
         </ContentHeaderContainer>
+        <PostsTable />
       </ContentContainer>
     </ScreenContainer>
   );

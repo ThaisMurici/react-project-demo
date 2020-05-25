@@ -5,9 +5,7 @@ import { fetchPosts } from "../../store/posts/duck";
 
 import PostsScreen from "./PostsScreen";
 
-const mapStateToProps = (state) => ({
-  posts: state.posts,
-});
+const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => ({
   handleFetchPosts: () => dispatch(fetchPosts()),

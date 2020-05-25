@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
+import { StylesProvider } from "@material-ui/core/styles";
 
 import { lightTheme } from "../../global/theme";
 import { GlobalStyle } from "../../global/styles";
@@ -14,13 +15,15 @@ import { ApplicationContainer } from "./styles";
 function App() {
   return (
     <Provider store={store}>
-      <ThemeProvider theme={lightTheme}>
-        <ApplicationContainer>
-          <GlobalStyle />
-          <MainHeader />
-          <Posts />
-        </ApplicationContainer>
-      </ThemeProvider>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={lightTheme}>
+          <ApplicationContainer>
+            <GlobalStyle />
+            <MainHeader />
+            <Posts />
+          </ApplicationContainer>
+        </ThemeProvider>
+      </StylesProvider>
     </Provider>
   );
 }

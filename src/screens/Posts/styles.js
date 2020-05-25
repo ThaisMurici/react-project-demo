@@ -10,7 +10,8 @@ export const ScreenContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  height: 85%;
+  display: flex;
+  flex-direction: column;
   width: 90%;
   background-color: ${(props) => props.theme.white};
   margin-top: 32px;
@@ -22,6 +23,7 @@ export const ContentHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   height: 40px;
+  margin-bottom: 12px;
 `;
 
 export const ContentHeaderTitle = styled.p`
