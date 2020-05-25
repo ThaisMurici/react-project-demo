@@ -1,22 +1,16 @@
-import React from "react";
+/** @format */
+import { connect } from "react-redux";
 
-import {
-  ScreenContainer,
-  ContentContainer,
-  ContentHeaderContainer,
-  ContentHeaderTitle,
-} from "./styles";
+import { fetchPosts } from "../../store/posts/duck";
 
-function Posts() {
-  return (
-    <ScreenContainer>
-      <ContentContainer>
-        <ContentHeaderContainer>
-          <ContentHeaderTitle>Posts</ContentHeaderTitle>
-        </ContentHeaderContainer>
-      </ContentContainer>
-    </ScreenContainer>
-  );
-}
+import PostsScreen from "./PostsScreen";
 
-export default Posts;
+const mapStateToProps = (state) => ({
+  posts: state.posts,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleFetchPosts: () => dispatch(fetchPosts()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostsScreen);
